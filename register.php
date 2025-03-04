@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Execute the statement
     if ($stmt->execute()) {
         // Registration successful, redirect to login page
-        echo "<script>alert('Registration successful! Please login.'); window.location.href='login.html';</script>";
+        echo "<script>alert('Registration successful! Please login.'); window.location.href='index.html';</script>";
     } else {
         // Registration failed
         echo "<script>alert('Registration failed. Please try again.'); window.location.href='register.html';</script>";
