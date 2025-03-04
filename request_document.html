@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="request_document.html">📝 Request Document</a></li>
+                <li><a href="my_request.html">📋 My Requests</a></li>
+                <li><a href="setting.html">⚙️ Settings</a></li>
+                <li><a href="logout.php">🚪 Logout</a></li>
+            </ul>
+        </nav>
+
+    <div class="container">
+        <h2>Request a Document</h2>
+        <form action="submit_request.php" method="POST">
+            <label for="document">Select Document:</label>
+            <select id="document" name="document"> <!-- Correct 'document' as the name -->
+                <option value="Barangay Clearance">Barangay Clearance</option>
+                <option value="Certificate of Residency">Certificate of Residency</option>
+                <option value="Indigency Certificate">Indigency Certificate</option>
+            </select>
+            <br>
+            <label for="purpose">Purpose:</label>
+            <input type="text" id="purpose" name="purpose" placeholder="Enter purpose..." required>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+</body>
+</html>

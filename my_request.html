@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Requests</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>My Requests</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Document Type</th>
+                    <th>Purpose</th>
+                    <th>Status</th>
+                    <th>Request Date</th>
+                </tr>
+            </thead>
+            <tbody id="request-table-body">
+                <!-- Requests will be inserted here dynamically -->
+            </tbody>
+        </table>
+        <br>
+        <a href="home.php">Back to home</a>
+    </div>
+
+    <script>
+        // Fetch requests when the page loads
+        fetch('my_request.php')  // Adjust the URL if necessary
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('request-table-body').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('AJAX Error: ', error);
+                alert('Error fetching requests. Check the console for details.');
+            });
+    </script>
+</body>
+</html>
